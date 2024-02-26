@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Teddy Bear",
+    "info": "Soft plush teddy bear toy",
+    "category": "Plush Toys",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 16
+  },
+  {
+    "id": 2,
+    "name": "LEGO Set",
+    "info": "Building blocks construction set",
+    "category": "Building Blocks",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 30
+  },
+  {
+    "id": 3,
+    "name": "Barbie Doll",
+    "info": "Fashion doll for play and display",
+    "category": "Dolls",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 20
+  },
+  {
+    "id": 4,
+    "name": "Remote Control Car",
+    "info": "Toy car with remote control",
+    "category": "Remote Control Toys",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 40
+  },
+  {
+    "id": 5,
+    "name": "Puzzle",
+    "info": "Educational jigsaw puzzle",
+    "category": "Educational Toys",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 13
+  },
+  {
+    "id": 6,
+    "name": "Board Game",
+    "info": "Classic family board game",
+    "category": "Games",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 25
+  },
+  {
+    "id": 7,
+    "name": "Action Figure",
+    "info": "Poseable action figure toy",
+    "category": "Action Figures",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 18
+  },
+  {
+    "id": 8,
+    "name": "Play-Doh Set",
+    "info": "Art and craft modeling compound set",
+    "category": "Art & Craft",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 10
+  },
+  {
+    "id": 9,
+    "name": "Wooden Train Set",
+    "info": "Wooden toy train and track set",
+    "category": "Wooden Toys",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 35
+  },
+  {
+    "id": 10,
+    "name": "Dollhouse",
+    "info": "Miniature dollhouse playset",
+    "category": "Playsets",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 50
+  },
+  {
+    "id": 11,
+    "name": "Bicycle",
+    "info": "Kids bicycle for outdoor riding",
+    "category": "Outdoor Toys",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 100
+  },
+  {
+    "id": 12,
+    "name": "Scooter",
+    "info": "Kick scooter for kids' outdoor play",
+    "category": "Outdoor Toys",
+    "img_url": "https://images.pexels.com/photos/20025771/pexels-photo-20025771/free-photo-of-people-and-pattern-story.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 60
+  }
+]
