@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-
+require('dotenv').config();
 
 exports.auth = (req,res,next) => {
   const token = req.header("x-api-key");
@@ -7,7 +7,7 @@ exports.auth = (req,res,next) => {
     return res.status(401).json({err:"You need to send token 1111"});
   }
   try{
-    const decodeToken = jwt.verify(token,"mySecretKey");
+    const decodeToken = jwt.verify(token,process.env.TOKEN_SECRET);
     req.tokenData = decodeToken
 
     next()
