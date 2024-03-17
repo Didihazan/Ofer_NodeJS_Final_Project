@@ -12,7 +12,7 @@ const ToysSchema = new mongoose.Schema({
   },{timestamps:true})
   
   
-  exports.ToysModel = mongoose.model("toyss",ToysSchema);
+  exports.ToysModel = mongoose.model("toys",ToysSchema);
   
   exports.validateToys = (_reqBody) => {
     const joiSchema = Joi.object({
