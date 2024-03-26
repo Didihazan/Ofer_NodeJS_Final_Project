@@ -10,7 +10,7 @@ router.get('/:category?', async (req, res) => {
     const category = req.params.category;
     let perPage = req.query.perPage ? Math.min(req.query.perPage, 10) : 10;
     perPage = Math.min(perPage, 10);
-    const { name, info } = req.query;
+    const { name, info, skip } = req.query;
     const query = {};
     if (category) {
         query.category = category;
@@ -22,9 +22,13 @@ router.get('/:category?', async (req, res) => {
         query.info = { $regex: new RegExp(info), $options: 'i' };
     }
     try {
-        const data = await ToysModel.find({
+        let queryResult = ToysModel.find({
             $or: [query]
         }).limit(perPage);
+        if (skip) {
+            queryResult = queryResult.skip(parseInt(skip));
+        }
+        const data = await queryResult;
         res.json(data);
     } catch (err) {
         res.status(502).json(err);
@@ -97,9 +101,8 @@ router.put('/:id', auth, async (req, res) => {
     const { error } = validateToys(req.body);
     if (error) return res.status(400).json(error.details[0].message);
     try {
-        const data = await ToysModel.findOne({ _id: req.params.id });
-        if (!data.user_id.equals(req.tokenData._id)) return res.status(401).json({ msg: "You can't edit this toy" });
-        const updated = await ToysModel.updateOne({ _id: req.params.id }, req.body);
+        const updated = await ToysModel.findOneAndUpdate({ _id: req.params.id, user_id: req.tokenData._id }, req.body, { new: true });
+        if (!updated) return res.status(401).json({ msg: "You can't edit this toy" });
         res.json(updated);
     } catch (err) {
         res.status(502).json(err);
@@ -108,13 +111,13 @@ router.put('/:id', auth, async (req, res) => {
 
 router.delete('/:id', auth, async (req, res) => {
     try {
-        const data = await ToysModel.findOne({ _id: req.params.id });
-        if (!data.user_id.equals(req.tokenData._id)) return res.status(401).json({ msg: "You can't edit this toy" });
-        const deleted = await ToysModel.deleteOne({ _id: req.params.id });
+        const deleted = await ToysModel.findOneAndDelete({ _id: req.params.id, user_id: req.tokenData._id });
+        if (!deleted) return res.status(401).json({ msg: "You can't delete this toy" });
         res.json(deleted);
     } catch (err) {
         res.status(502).json(err);
     }
 });
+
 
 module.exports = router;
