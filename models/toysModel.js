@@ -20,8 +20,7 @@ const ToysSchema = new mongoose.Schema({
       info:Joi.string().min(3).max(1000).required(),
       category:Joi.string().min(3).max(100).required(),
       img_url:Joi.string().min(3).max(100).optional(),
-      price:Joi.number().min(4).max(20000).required(),
-      user_id:Joi.string().required()
+      price:Joi.number().min(4).max(20000).required()
     })
     return joiSchema.validate(_reqBody)
   }
